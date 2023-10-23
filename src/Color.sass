@@ -1,0 +1,42 @@
+@each $k,$v in $colors
+
+  .#{$k}
+    color: $v!important
+    &.darken
+      color: darken( $v, 10% )!important
+    &.lighten
+      color: lighten( $v, 10% )!important
+
+  .bg-#{$k}
+    background-color: $v!important
+    &.darken, &.tap-darken:active
+      background-color: darken( $v, 4% )!important
+    &.lighten, &.tap-lighten:active
+      background-color: lighten( $v, 4% )!important
+
+
+  .border-#{$k}
+    border: 1px $v solid
+    &.border-darken
+      border-color: darken( $v, 4% )!important
+    &.border-lighten
+      border-color: lighten( $v, 4% )!important
+    &.border-b
+      border-top: 0
+      border-bottom: 1px $v solid
+      border-left: 0
+      border-right: 0 
+    &.border-t
+      border-top: 1px $v solid
+      border-bottom: 0
+      border-left: 0
+      border-right: 0
+    .border-dashed
+      border-style: dashed
+
+.bg-none
+    background: none!important
+.bg-cover
+    background-size: cover!important
+    background-position: center center!important
+    background-color: #ccc!important

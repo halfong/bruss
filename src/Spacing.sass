@@ -1,0 +1,40 @@
+@each $k,$s in $spacings
+  .m-#{$k}
+    margin: $s
+  .mt-#{$k}
+    margin-top: $s!important
+  .mb-#{$k}
+    margin-bottom: $s!important
+  .ml-#{$k}
+    margin-left: $s!important
+  .mr-#{$k}
+    margin-right: $s!important
+  .mx-#{$k}
+    margin-left: $s!important
+    margin-right: $s!important
+  .my-#{$k}
+    margin-top: $s!important
+    margin-bottom: $s!important
+
+  .p-#{$k}
+    padding: $s
+  .pt-#{$k}
+    padding-top: $s!important
+  .pb-#{$k}
+    padding-bottom: $s!important
+  .pl-#{$k}
+    padding-left: $s!important
+  .pr-#{$k}
+    padding-right: $s!important
+  .px-#{$k}
+    padding-left: $s!important
+    padding-right: $s!important
+  .py-#{$k}
+    padding-top: $s!important
+    padding-bottom: $s!important
+
+  .flex-row
+    &.gap-#{$k}
+      gap: $s
+      row-gap: $s
+    

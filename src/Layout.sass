@@ -1,0 +1,112 @@
+body,html
+  padding: 0
+  margin: 0
+*
+  box-sizing: border-box
+div
+  position: relative
+.inline
+  display: inline-block
+  vertical-align: top 
+.block
+  box-sizing: border-box
+  display: block 
+  width: 100%
+
+/**
+ * Container ( with width )
+ */
+@media screen and (orientation: portrait)
+  .container
+    width: 100vw
+    padding: 0 $container-padding-x
+
+@media screen and (orientation: landscape)
+  .container
+    max-width: $container-max-width
+    width: 100vw
+    margin: 0 auto
+
+/**
+ * Alignment
+ */
+.left
+    text-align: left 
+.right
+    text-align: right 
+.center
+    text-align: center 
+
+.fix-t
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 10
+.fix-b
+    position: fixed
+    bottom: 0
+    left: 0
+    width: 100%
+    z-index: 10
+    
+.ab-tl
+    position: absolute
+    top: 0
+    left: 0
+.ab-tr
+    position: absolute
+    top: 0
+    right: 0
+.ab-bl
+    position: absolute
+    bottom: 0
+    left: 0
+.ab-br
+    position: absolute
+    bottom: 0
+    right: 0
+.fleft
+    float: left 
+.fright
+    float: right 
+
+/**
+ * Flex Row
+ * .flex-row> .flex-[1,2,3,5], .flex-[1,2,3,5]-mobile
+ */
+.flex-row
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: flex-start
+  display: flex 
+  &.center
+    justify-content: center
+  &.vcenter
+    align-items: center
+
+@media screen and (orientation: landscape)
+  .flex-row
+    >.flex-1
+      flex: 1 0
+    >.flex-2
+      flex: 2
+    >.flex-3
+      flex: 3
+    >.flex-5
+      flex: 5
+    >.flex-none
+      flex: none
+
+@media screen and (orientation: portrait)
+  .flex-row
+    >.flex-m-1
+      flex: 1
+    >.flex-m-2
+      flex: 2
+    >.flex-m-3
+      flex: 3
+    >.flex-m-5
+      flex: 5
+    >.flex-none
+      flex: none
