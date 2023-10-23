@@ -250,13 +250,13 @@ template {
   border-style: dashed;
 }
 
-.gray, .desc {
+.gray {
   color: #aaa !important;
 }
-.gray.darken, .darken.desc {
+.gray.darken {
   color: #919191 !important;
 }
-.gray.lighten, .lighten.desc {
+.gray.lighten {
   color: #c4c4c4 !important;
 }
 
@@ -446,7 +446,7 @@ div {
   text-align: right;
 }
 
-.center, .desc {
+.center {
   text-align: center;
 }
 
@@ -508,7 +508,7 @@ div {
   justify-content: flex-start;
   display: flex;
 }
-.flex-row.center, .flex-row.desc {
+.flex-row.center {
   justify-content: center;
 }
 .flex-row.vcenter {
@@ -1380,7 +1380,7 @@ h1, h2, h3, h4, h5, h6, p, i, a, span, li, div {
   line-height: 1.35rem !important;
 }
 
-.t-6, .desc {
+.t-6 {
   font-size: 0.8rem;
   line-height: 1.2rem;
 }
@@ -1452,8 +1452,4 @@ h1, h2, h3, h4, h5, h6, p, i, a, span, li, div {
 
 .line-through {
   text-decoration: line-through;
-}
-
-* {
-  font-family: sans-serif;
 }

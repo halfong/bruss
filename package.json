@@ -1,6 +1,6 @@
 {
   "name": "bruss",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple stylesheets helper kit in sass language",
   "main": "src/Index.sass",
   "scripts": {
