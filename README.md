@@ -7,19 +7,21 @@ Bruss is a simple stylesheets helper kit in sass language. You could save almost
 In you app.sass (or anything like that), define variables that required, then import Bruss.
 
 Here's an example contains all the variables:
-```sass
-$radius :16px
-$container-max-width: 960px
-$container-padding-x: 4vw
 
-$colors: ( white: #fff, silver: #f4f4f4, gray: #aaa, black: #1b1b1b, primary: #38B833 )
-$texts: ( 1: 2.6rem, 2: 1.6rem, 3: 1.1rem, 4: 1rem, 5: .9rem, 6: .8rem, 7: .6rem )
-$sizes: ( 24: 24px, 36: 36px, 44: 44px, 54: 54px, 64: 64px )
-$spacings: ( 0: 0rem, 1: .25rem, 2: .5rem, 3: 1rem, 4: 2rem, 5: 4rem )
+```scss
+// defined your theme variables
+$theme: (
+  radius : 16px,
+  container-max-width: 960px,
+  container-padding-x: 4vw,
+  colors: ( white: #fff, silver: #f4f4f4, gray: #aaa, black: #1b1b1b, primary: #38B833 ),
+  texts: ( 1: 2.6rem, 2: 1.6rem, 3: 1.1rem, 4: 1rem, 5: .9rem, 6: .8rem, 7: .6rem ),
+  sizes:  ( 24: 24px,36: 36px,44: 44px,54: 54px,64: 64px, 120: 120px ),
+  spacings: ( 0: 0, 2: 2px, 5: 5px, 10: 10px, 15: 15px, 20: 20px, 30: 30px, 50: 50px ),
+);
 
-@import 'src/Index'
-
-// And define your custom styles below
+// use the kit
+@use 'bruss' with ( $theme : $theme );
 ```
 
 

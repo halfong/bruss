@@ -1,3 +1,6 @@
+@use "sass:map"
+$theme: ( radius : 16px )!default
+
 /**
  * 显示/隐藏
  */
@@ -14,13 +17,13 @@
  * 圆角
  */
 .round
-  border-radius: $radius!important
+  border-radius: map.get($theme,radius)!important
   overflow: hidden
 .round-t
-  border-radius: $radius $radius 0 0
+  border-radius: map.get($theme,radius) map.get($theme,radius) 0 0
   overflow: hidden
 .round-b
-  border-radius: 0 0 $radius $radius
+  border-radius: 0 0 map.get($theme,radius) map.get($theme,radius)
   overflow: hidden
 .round-sink
   width: 6vw

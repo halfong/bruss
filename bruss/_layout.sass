@@ -1,3 +1,6 @@
+@use "sass:map"
+$theme: ( container-max-width: 960px, container-padding-x: 4vw )!default
+
 body,html
   padding: 0
   margin: 0
@@ -19,11 +22,11 @@ div
 @media screen and (orientation: portrait)
   .container
     width: 100vw
-    padding: 0 $container-padding-x
+    padding: 0 map.get( $theme, container-padding-x )
 
 @media screen and (orientation: landscape)
   .container
-    max-width: $container-max-width
+    max-width: map.get( $theme, container-max-width )
     width: 100vw
     margin: 0 auto
 

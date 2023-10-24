@@ -1,5 +1,5 @@
 {
-  "compile-hero.disable-compile-files-on-did-save-code": false,
+  "compile-hero.disable-compile-files-on-did-save-code": true,
   "compile-hero.generate-minified-css": false,
   "compile-hero.generate-minified-css-only": false,
   "compile-hero.sass-output-directory": "./"
