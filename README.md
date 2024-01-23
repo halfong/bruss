@@ -14,13 +14,14 @@ $theme: (
   radius : 16px,
   container-max-width: 960px,
   container-padding-x: 4vw,
-  colors: ( white: #fff, silver: #f4f4f4, gray: #aaa, black: #1b1b1b, primary: #38B833 ),
+  colors: ( "white": #fff, "silver": #f4f4f4, "gray": #aaa, "black": #1b1b1b, "primary": #38B833 ),
   texts: ( 1: 2.6rem, 2: 1.6rem, 3: 1.1rem, 4: 1rem, 5: .9rem, 6: .8rem, 7: .6rem ),
   sizes:  ( 24: 24px,36: 36px,44: 44px,54: 54px,64: 64px, 120: 120px ),
   spacings: ( 0: 0, 2: 2px, 5: 5px, 10: 10px, 15: 15px, 20: 20px, 30: 30px, 50: 50px ),
 );
 
 // use the kit
+// in your project, it should be 'bruss/bruss' or relative path to the node_modules folder.
 @use 'bruss' with ( $theme : $theme );
 ```
 
@@ -30,6 +31,8 @@ $theme: (
 According to the variables you defined, most used classes will be generated (In brackets are the required variables ).
 
 You could see the detail style definations in /src folder, i promise it's simple.
+
+---
 
 ### Layout
 
@@ -52,6 +55,8 @@ text-align : `left`,`right`,`center`
 
 > Notice: all block were set to 'box-sizing:border-box' and 'position:relative'
 
+---
+
 ### Color ( $colors )
 
 $colors<Map> should be defined before import.
@@ -68,6 +73,8 @@ center image background : `bg-cover`:
 
 border : `.border-red`,`&.border-t`,`&.border-b`,`.border-dashed`,`.border-darken`,`.border-lighten`
 
+---
+
 ### Size ( $sizes )
 
 width:100% : `w-full`,`h-full`
@@ -80,6 +87,8 @@ Each key in $sizes should generate classes, for example key:'44':
 
 width & height: `w-44`,`h-44`,`wh-44`
   \> `round-full`
+
+---
 
 ### Spacing ( $spacings )
 
@@ -94,6 +103,8 @@ padding : `.p-10`,`.pt-10`,`.pb-10`,`.pl-10`,`.pr-10`,`.px-10`,`.py-10`
 .flex-row
   > `gap-10`
 
+---
+
 ### Text ( $texts, $sizes )
 
 $texts<Map> should be defined before import.
@@ -106,6 +117,8 @@ line-height : `.th-4`,`.th-44`
 
 helpers : `nowrap`,`break-all`,`trim`,`bold`,`italic`,`underline`,`line-through`
 
+---
+
 ## Effect ( $radius )
 
 display:none : `hide`,`hide-mobile`,`hide-desk`
@@ -115,6 +128,8 @@ border-radius : `.round`,`.round-t`,`.round-b`,
 active style : `tap-opacity`,`tap-expand`,`tap-darken`
 
 helpers : `flip`,`crop`,`shadow`
+
+---
 
 # Credits
 
