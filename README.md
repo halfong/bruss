@@ -9,7 +9,7 @@ Save **80%** (in my practice) time of writing styles by just `@use 'btuss'`.
 Refer to the following example:
 
 ```scss
-// 1. Defined your theme variables
+// 1. Define your theme variables
 $theme: (
   // Containers' max with or padding-x on mobile
   container-max-width: 960px,
@@ -22,8 +22,8 @@ $theme: (
   spacings: ( 0: 0, 2: 2px, 5: 5px, 10: 10px, 15: 15px, 20: 20px, 30: 30px, 50: 50px ),
 );
 
-// 2. Use the burss
-// If sass compiler says 'stylesheet not found': try use path 'bruss/bruss' or '[path_to_node_modules]/bruss/bruss/index'
+// 2. Use the bruss
+// If sass compiler says 'stylesheet not found': try use path 'bruss/bruss' or '{path_to_node_modules}/bruss/bruss/index'
 @use 'bruss' with ( $theme : $theme );
 
 // 3. Define your own styls

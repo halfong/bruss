@@ -12,7 +12,10 @@
     "style-helper",
     "css"
   ],
-  "repository": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/halfong/bruss.git"
+  },
   "author": "halfong",
   "email":"0xhalfong@gmail.com",
   "license": "ISC"
