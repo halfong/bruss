@@ -50,29 +50,3 @@ $theme: ( radius : 16px )!default
   transform: rotateY(180deg)
 .crop
   overflow: hidden
-
-@media screen and (orientation: landscape)
-  .shadow
-    box-shadow: 0 0 1vw rgba(0,0,0,.3)
-@media screen and (orientation: portrait)
-  .shadow
-    box-shadow: 0 0 1vh rgba(0,0,0,.2)
-
-
-/**
- * 透明渐变蒙层
- */
-.shadow-b
-    background: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, .3))
-    &.dark
-        background: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, .5))
-    &.darken
-        background: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, .88))
-.shadow-t
-    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0,0,0,0) )
-    &.dark
-        background: linear-gradient(rgba(0,0,0,.5), rgba(0, 0, 0,0) )
-    &.darken
-        background: linear-gradient(rgba(0,0,0,.88), rgba(0, 0, 0,0) )
-.shadow-white-b
-    background: linear-gradient(rgba(255, 255, 255, 0),rgba(255,255,255,.96) 30%, white 60%)

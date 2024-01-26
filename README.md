@@ -1,100 +1,131 @@
 # Bruss
 
-Bruss is a simple stylesheets helper kit in sass language. You could save almost **80%** (in my practice) time of writing styles by just `@import` it to your project.
+Bruss is a simple css style kit in [sass](https://sass-lang.com).
+
+Save **80%** (in my practice) time of writing styles by just `@use 'btuss'`.
 
 # How to use
 
-In you app.sass (or anything like that), define variables that required, then import Bruss.
-
-Here's an example contains all the variables:
+Refer to the following example:
 
 ```scss
-// defined your theme variables
+// 1. Defined your theme variables
 $theme: (
-  radius : 16px,
+  // Containers' max with or padding-x on mobile
   container-max-width: 960px,
   container-padding-x: 4vw,
+  // Base UI Factors
+  radius : 16px,
   colors: ( "white": #fff, "silver": #f4f4f4, "gray": #aaa, "black": #1b1b1b, "primary": #38B833 ),
   texts: ( 1: 2.6rem, 2: 1.6rem, 3: 1.1rem, 4: 1rem, 5: .9rem, 6: .8rem, 7: .6rem ),
   sizes:  ( 24: 24px,36: 36px,44: 44px,54: 54px,64: 64px, 120: 120px ),
   spacings: ( 0: 0, 2: 2px, 5: 5px, 10: 10px, 15: 15px, 20: 20px, 30: 30px, 50: 50px ),
 );
 
-// use the kit
-// in your project, it should be 'bruss/bruss' or relative path to the node_modules folder.
+// 2. Use the burss
+// If sass compiler says 'stylesheet not found': try use path 'bruss/bruss' or '[path_to_node_modules]/bruss/bruss/index'
 @use 'bruss' with ( $theme : $theme );
+
+// 3. Define your own styls
+html,body{
+  @extend .black, .t-4; // set default text style
+  font-family: sans-serif;
+}
+.card{  // For example: a inline-block card
+  @extend .bg-silver, .border-gray, .round, .inline, .p-20;
+}
+// other styles...
+
 ```
 
 
-# Classes
-
-According to the variables you defined, most used classes will be generated (In brackets are the required variables ).
-
-You could see the detail style definations in /src folder, i promise it's simple.
-
 ---
 
-### Layout
 
-`.container` ( $container-max-width, $container-padding-x )
+# Classe References
 
-`.inline`,`.block`
+According to the variables you defined, most regular used classes will be generated. 
 
-use flex to layout : `flex-row`
-  & `center`,`vcenter`
-  \> `flex-1`,`flex-2`,`flex-3`,`flex-5`,`flex-none`
-  \> `flex-m-1`,`flex-m-2`,`flex-m-3`,`flex-m-5`,`flex-m-none`
-
-position:fixed : `fix-t`,`fix-b`
-
-position:absolute : `ab-tl`,`ab-tr`,`ab-bl`,`ab-br`,
-
-float : `fleft`,`fright`
-
-text-align : `left`,`right`,`center`
+It's suggested to go through definations in /bruss folder, I promise it's simple.
 
 > Notice: all block were set to 'box-sizing:border-box' and 'position:relative'
 
+
 ---
+
+
+### Layout
+
+`.container`
+
+A Wrapper which width contracted by *$container-max-width* *$container-padding-x*.
+
+
+`.inline`,`.block`
+
+Note .inline means 'display:inline-block'.
+
+
+`.flex-row` & `.center`,`.vcenter`
+
+Define a flex-row wrapper and align child elements.
+
+
+`.flex-1`,`.flex-2`,`.flex-3`,`.flex-5`,`.flex-none`
+
+`.flex-m-1`,`.flex-m-2`,`.flex-m-3`,`.flex-m-5`,`.flex-m-none`
+
+Define flex elements in *.flex-row*.
+
+
+`.fix-t`,`.fix-b`: set 'fix'
+
+
+`.ab-tl`,`.ab-tr`,`.ab-bl`,`.ab-br` : set 'position:absolute' and tl('top:0,left:0') or tr, bl, br.
+
+
+`.fleft`,`.fright` : set 'float'
+
+
+`.left`,`.right`,`.center` : set 'text-align'
+
+
+---
+
 
 ### Color ( $colors )
 
-$colors<Map> should be defined before import.
+Each key in $colors will be generated into classes, for example 'red':
 
-Each key in $colors should generate classes, for example key:'red':
+`.red` : set 'color', modify + `.darken`,`.lighten`
 
-color : `.red`,`.red .darken`,`.red .lighten`
+`.bg-red`, `.bg-none` : set 'background-color', modify + `.darken`,`.lighten`, `.tap-darken`, `.tap-lighten`
 
-background-color : `.bg-red`,`.bg-red .darken`,`.bg-red .lighten`,`bg-none`
+`.bg-cover`: set 'background' center image and 'cover' mode
 
-daken background when tapped(:active) : `.tap-darken`, `tap-lighten`
+`.border-red` : set 'border', modify + `.border-t`,`.border-b`,`.border-dashed`,`.border-darken`,`.border-lighten`
 
-center image background : `bg-cover`:
-
-border : `.border-red`,`&.border-t`,`&.border-b`,`.border-dashed`,`.border-darken`,`.border-lighten`
 
 ---
 
-### Size ( $sizes )
 
-width:100% : `w-full`,`h-full`
+### Size (use $sizes )
 
-100vw or 100vh : `w-100`,`h-100`,`w-min-100`,`h-min-100`
+Each key in $colors will be generated into classes, for example key:'44':
 
-$sizes<Map> should be defined before import.
+`.w-full`,`.h-full` : set 'width' or 'height' to 100%
 
-Each key in $sizes should generate classes, for example key:'44':
+`.w-100`,`.h-100`,`.w-min-100`,`.h-min-100` : set '(max-)width' or '(max-)height' to 100vw
 
-width & height: `w-44`,`h-44`,`wh-44`
-  \> `round-full`
+`.w-44`,`.h-44`,`.wh-44` : set 'width', 'height', modify + `.round-full`
+
 
 ---
 
-### Spacing ( $spacings )
 
-$spacings<Map> should be defined before import.
+### Spacing (use $spacings )
 
-Each key in $spacings should generate classes, for example key:'10':
+Each key in $colors will be generated into classes, for example key:'10':
 
 margin : `.m-10`,`.mt-10`,`.mb-10`,`.ml-10`,`.mr-10`,`.mx-10`,`.my-10`
 
@@ -103,33 +134,37 @@ padding : `.p-10`,`.pt-10`,`.pb-10`,`.pl-10`,`.pr-10`,`.px-10`,`.py-10`
 .flex-row
   > `gap-10`
 
----
-
-### Text ( $texts, $sizes )
-
-$texts<Map> should be defined before import.
-
-Each key in $texts should generate classes, for example key:'4', and $sizes key:'44':
-
-font-size : `.t-4`
-
-line-height : `.th-4`,`.th-44`
-
-helpers : `nowrap`,`break-all`,`trim`,`bold`,`italic`,`underline`,`line-through`
 
 ---
+
+
+### Text (use $texts, $sizes )
+
+Each key in $colors will be generated into classes, for example $texts key:'4', and $sizes key:'44':
+
+`.t-4` : set 'font-size'
+
+`.th-4`,`.th-44` : set 'line-height'
+
+`nowrap`,`break-all`,`trim`,`bold`,`italic`,`underline`,`line-through` : helpers
+
+
+---
+
 
 ## Effect ( $radius )
 
-display:none : `hide`,`hide-mobile`,`hide-desk`
+`.hide`,`.hide-mobile`,`.hide-desk` : set 'display:none' in diffrent device
 
-border-radius : `.round`,`.round-t`,`.round-b`,
+`.round`,`.round-t`,`.round-b` : set 'border-radius'
 
-active style : `tap-opacity`,`tap-expand`,`tap-darken`
+`.tap-opacity`,`.tap-expand`,`.tap-darken`,`.tap-lighten` : set active style
 
-helpers : `flip`,`crop`,`shadow`
+`flip`,`crop` :  helpers
+
 
 ---
+
 
 # Credits
 
