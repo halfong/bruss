@@ -2,7 +2,7 @@
 
 Bruss is a simple css style kit in [sass](https://sass-lang.com).
 
-Save **80%** (in my practice) time of writing styles by just `@use 'btuss'`.
+Save **80%** (in my practice) time of writing styles by just `@use 'bruss'`.
 
 # How to use
 
