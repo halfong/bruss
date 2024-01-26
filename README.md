@@ -111,7 +111,7 @@ Each key in $colors will be generated into classes, for example 'red':
 
 ### Size (use $sizes )
 
-Each key in $colors will be generated into classes, for example key:'44':
+Each key in $sizes will be generated into classes, for example key:'44':
 
 `.w-full`,`.h-full` : set 'width' or 'height' to 100%
 
@@ -125,7 +125,7 @@ Each key in $colors will be generated into classes, for example key:'44':
 
 ### Spacing (use $spacings )
 
-Each key in $colors will be generated into classes, for example key:'10':
+Each key in $spacings will be generated into classes, for example key:'10':
 
 margin : `.m-10`,`.mt-10`,`.mb-10`,`.ml-10`,`.mr-10`,`.mx-10`,`.my-10`
 
@@ -140,7 +140,7 @@ padding : `.p-10`,`.pt-10`,`.pb-10`,`.pl-10`,`.pr-10`,`.px-10`,`.py-10`
 
 ### Text (use $texts, $sizes )
 
-Each key in $colors will be generated into classes, for example $texts key:'4', and $sizes key:'44':
+Each key in $texts will be generated into classes, for example $texts key:'4', and $sizes key:'44':
 
 `.t-4` : set 'font-size'
 
