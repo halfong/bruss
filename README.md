@@ -68,7 +68,7 @@ Note .inline means 'display:inline-block'.
 
 `.flex-row` & `.center`,`.vcenter`
 
-Define a flex-row wrapper and align child elements.
+Define a flex-row wrapper and align child elements. modify + `.gap-${spacing}`
 
 
 `.flex-1`,`.flex-2`,`.flex-3`,`.flex-5`,`.flex-none`
@@ -127,12 +127,9 @@ Each key in $sizes will be generated into classes, for example key:'44':
 
 Each key in $spacings will be generated into classes, for example key:'10':
 
-margin : `.m-10`,`.mt-10`,`.mb-10`,`.ml-10`,`.mr-10`,`.mx-10`,`.my-10`
+`.m-10`,`.mt-10`,`.mb-10`,`.ml-10`,`.mr-10`,`.mx-10`,`.my-10` : set 'margin'
 
-padding : `.p-10`,`.pt-10`,`.pb-10`,`.pl-10`,`.pr-10`,`.px-10`,`.py-10`
-
-.flex-row
-  > `gap-10`
+`.p-10`,`.pt-10`,`.pb-10`,`.pl-10`,`.pr-10`,`.px-10`,`.py-10` : set 'padding'
 
 
 ---
@@ -146,7 +143,7 @@ Each key in $texts will be generated into classes, for example $texts key:'4', a
 
 `.th-4`,`.th-44` : set 'line-height'
 
-`nowrap`,`break-all`,`trim`,`bold`,`italic`,`underline`,`line-through` : helpers
+`.nowrap`,`.break-all`,`.trim`,`.bold`,`.italic`,`.underline`,`.line-through` : helpers
 
 
 ---
@@ -160,7 +157,7 @@ Each key in $texts will be generated into classes, for example $texts key:'4', a
 
 `.tap-opacity`,`.tap-expand`,`.tap-darken`,`.tap-lighten` : set active style
 
-`flip`,`crop` :  helpers
+`.flip`,`.crop` :  helpers
 
 
 ---
