@@ -1,6 +1,6 @@
 {
   "name": "bruss",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Bruss is a simple css style kit base on sass, which save 80% time of styling web UI.",
   "main": "src/Index.sass",
   "scripts": {
