@@ -1,7 +1,6 @@
 /**
  * default theme
  */
-
 $theme: (
   radius : 16px,
   container-max-width: 960px,
@@ -46,9 +45,9 @@ $theme: (
   ),
 )!default;
 
-@use "_layout.sass" with ( $theme: $theme );
-@use "_color.sass" with ( $theme: $theme );
-@use "_text.sass" with ( $theme: $theme );
-@use "_size.sass" with ( $theme: $theme );
-@use "_spacing.sass" with ( $theme: $theme );
-@use "_effect.sass" with ( $theme: $theme );
+@import "_layout.sass";
+@import "_color.sass";
+@import "_text.sass";
+@import "_size.sass";
+@import "_spacing.sass";
+@import "_effect.sass";

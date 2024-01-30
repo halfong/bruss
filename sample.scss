@@ -11,7 +11,7 @@ $theme: (
 
 // use the kit
 // in your project, it should be 'bruss/bruss' or relative path to the node_modules folder.
-@use 'bruss' with ( $theme : $theme );
+@import 'bruss';
 
 // custome styles
 *{

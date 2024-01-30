@@ -1,32 +1,33 @@
-@use "sass:map"
 $theme: ( texts: (), sizes: () )!default
 
 /**
  * 重置样式
  */
-h1, h2, h3, h4, h5, h6, p, i, a, span, li, div
+*
   font-size: inherit
   line-height: inherit
   color: inherit
   text-decoration: none
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+h1, h2, h3, h4, h5, h6, p, i, a, span, li, div
   padding: 0
   margin: 0
   vertical-align: top
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
 
 /**
  * 字号: .t1 ~ .t7
  * 行高: .th1 ~ .th7   & .th{..$sizes}
  */
-@each $k, $v in map.get( $theme, texts )
+@each $k, $v in map-get( $theme, texts )
   .t-#{$k}
     font-size: $v
     line-height: 1.5*$v
   .th-#{$k}
     line-height: 1.5*$v
 
-@each $k, $v in map.get( $theme, sizes )
+@each $k, $v in map-get( $theme, sizes )
   .th-#{$k}
     line-height: $v
 
