@@ -83,7 +83,7 @@ Only works when '@media screen and (orientation: landscape)'
 Only works when '@media screen and (orientation: portrait)'
 
 
-`.grid .grid-cols-*`, set element to grid with *(2-6) element each row.
+`.grid .grid-cols-* .grid-cols-m-*`, set element to grid with *(2-6) element each row. ( defint grid-gap by yourself )
 
 Only works when '@media screen and (orientation: landscape)'
 
@@ -176,4 +176,3 @@ Each key in $texts will be generated into classes, for example $texts key:'4', a
 # Credits
 
 [Sass](https://sass-lang.com/)
-

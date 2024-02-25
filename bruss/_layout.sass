@@ -72,7 +72,7 @@ div
     float: right 
 
 /**
- * Flex Row
+ * Flex & Grid
  * .flex-row> .flex-[1,2,3,5], .flex-[1,2,3,5]-mobile
  */
 .flex-row
@@ -84,7 +84,6 @@ div
     justify-content: center
   &.vcenter
     align-items: center
-
 
 @media screen and (orientation: landscape)
   .flex-row
@@ -100,19 +99,6 @@ div
       flex: 6
     >.flex-none
       flex: none
-  .grid
-    display: grid
-    grid-gap: 0
-    &.grid-cols-2
-      grid-template-columns: repeat( 2, 1fr )
-    &.grid-cols-3
-      grid-template-columns: repeat( 3, 1fr )
-    &.grid-cols-4
-      grid-template-columns: repeat( 4, 1fr )
-    &.grid-cols-5
-      grid-template-columns: repeat( 5, 1fr )
-    &.grid-cols-6
-      grid-template-columns: repeat( 6, 1fr )
 
 @media screen and (orientation: portrait)
   .flex-row
@@ -126,3 +112,33 @@ div
       flex: 5
     >.flex-none
       flex: none
+
+.grid
+  display: grid
+  grid-gap: 0
+
+@media screen and (orientation: landscape)
+  .grid
+    &.grid-cols-2
+      grid-template-columns: repeat( 2, 1fr )
+    &.grid-cols-3
+      grid-template-columns: repeat( 3, 1fr )
+    &.grid-cols-4
+      grid-template-columns: repeat( 4, 1fr )
+    &.grid-cols-5
+      grid-template-columns: repeat( 5, 1fr )
+    &.grid-cols-6
+      grid-template-columns: repeat( 6, 1fr )
+
+@media screen and (orientation: portrait)
+  .grid
+    &.grid-cols-m-2
+      grid-template-columns: repeat( 2, 1fr )
+    &.grid-cols-m-3
+      grid-template-columns: repeat( 3, 1fr )
+    &.grid-cols-m-4
+      grid-template-columns: repeat( 4, 1fr )
+    &.grid-cols-m-5
+      grid-template-columns: repeat( 5, 1fr )
+    &.grid-cols-m-6
+      grid-template-columns: repeat( 6, 1fr )
