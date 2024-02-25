@@ -2,11 +2,18 @@
 
 Bruss is a simple css style kit in [sass](https://sass-lang.com).
 
-Save **80%** (in my practice) time of writing styles by just `@use 'bruss'`.
+Save **80%** (in my practice) time of writing styles by just `@import 'bruss'`.
+
+> Notice: '@use' was replaced with '@import' as it's not work in generally.
 
 # How to use
 
-Refer to the following example:
+
+```bash
+npm i bruss
+```
+
+The define your app theme variables and import 'burss', see example below:
 
 ```scss
 // 1. Define your theme variables
@@ -24,9 +31,9 @@ $theme: (
 
 // 2. Use the bruss
 // If sass compiler says 'stylesheet not found': try use path 'bruss/bruss' or '{path_to_node_modules}/bruss/bruss/index'
-@use 'bruss' with ( $theme : $theme );
+@import 'bruss';
 
-// 3. Define your own styls
+// 3. Define your own styles
 html,body{
   @extend .black, .t-4; // set default text style
   font-family: sans-serif;
@@ -51,9 +58,6 @@ It's suggested to go through definations in /bruss folder, I promise it's simple
 > Notice: all block were set to 'box-sizing:border-box' and 'position:relative'
 
 
----
-
-
 ### Layout
 
 `.container`
@@ -71,11 +75,19 @@ Note .inline means 'display:inline-block'.
 Define a flex-row wrapper and align child elements. modify + `.gap-${spacing}`
 
 
-`.flex-1`,`.flex-2`,`.flex-3`,`.flex-5`,`.flex-none`
+`.flex-row` > `.flex-1`,`.flex-2`,`.flex-3`,`.flex-5`,`.flex-none`
 
-`.flex-m-1`,`.flex-m-2`,`.flex-m-3`,`.flex-m-5`,`.flex-m-none`
+Only works when '@media screen and (orientation: landscape)'
 
-Define flex elements in *.flex-row*.
+
+`.flex-row` > `.flex-m-1`,`.flex-m-2`,`.flex-m-3`,`.flex-m-5`,`.flex-m-none`
+
+Only works when '@media screen and (orientation: portrait)'
+
+
+`.grid .grid-cols-* .grid-cols-m-*`, set element to grid with *(2-6) element each row. ( defint grid-gap by yourself )
+
+Only works when '@media screen and (orientation: landscape)'
 
 
 `.fix-t`,`.fix-b`: set 'fix'
@@ -149,7 +161,7 @@ Each key in $texts will be generated into classes, for example $texts key:'4', a
 ---
 
 
-## Effect ( $radius )
+### Effect ( $radius )
 
 `.hide`,`.hide-mobile`,`.hide-desk` : set 'display:none' in diffrent device
 
@@ -166,4 +178,3 @@ Each key in $texts will be generated into classes, for example $texts key:'4', a
 # Credits
 
 [Sass](https://sass-lang.com/)
-

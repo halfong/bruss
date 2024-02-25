@@ -1,7 +1,6 @@
-@use "sass:map"
 $theme: ( spacings: () )!default
 
-@each $k,$s in map.get( $theme, spacings )
+@each $k,$s in map-get( $theme, spacings )
   .m-#{$k}
     margin: $s
   .mt-#{$k}

@@ -1,4 +1,3 @@
-@use "sass:map"
 $theme: ( sizes: () )!default
 
 .w-full
@@ -15,7 +14,7 @@ $theme: ( sizes: () )!default
 .h-min-100
   min-height: 100vh
 
-@each $k,$v in map.get( $theme, sizes )
+@each $k,$v in map-get( $theme, sizes )
   .w-#{$k}
     width: $v!important
   .h-#{$k}

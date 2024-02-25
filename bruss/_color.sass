@@ -1,7 +1,6 @@
-@use "sass:map"
 $theme: ( colors: () )!default
 
-@each $k,$v in map.get( $theme, colors ) 
+@each $k,$v in map-get( $theme, colors ) 
 
   .#{$k}
     color: $v
