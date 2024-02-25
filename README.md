@@ -8,7 +8,12 @@ Save **80%** (in my practice) time of writing styles by just `@import 'bruss'`.
 
 # How to use
 
-Refer to the following example:
+
+```bash
+npm i bruss
+```
+
+The define your app theme variables and import 'burss', see example below:
 
 ```scss
 // 1. Define your theme variables
@@ -28,7 +33,7 @@ $theme: (
 // If sass compiler says 'stylesheet not found': try use path 'bruss/bruss' or '{path_to_node_modules}/bruss/bruss/index'
 @import 'bruss';
 
-// 3. Define your own styls
+// 3. Define your own styles
 html,body{
   @extend .black, .t-4; // set default text style
   font-family: sans-serif;
@@ -51,9 +56,6 @@ According to the variables you defined, most regular used classes will be genera
 It's suggested to go through definations in /bruss folder, I promise it's simple.
 
 > Notice: all block were set to 'box-sizing:border-box' and 'position:relative'
-
-
----
 
 
 ### Layout
