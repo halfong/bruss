@@ -187,15 +187,3 @@ Each key in $texts will be generated into classes, for example $texts key:'4', a
 
 # Known Issues
 
-### in holli-translator
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-   ╷
-23 │       border-radius: $v/2!important
-   │                      ^^^^
-   ╵
-    node_modules/bruss/bruss/_size.sass 23:22  @import
-    node_modules/bruss/bruss/_index.scss 51:9  @import
-    newtab/index.scss 20:9                     root stylesheet
-Deprecation Warning: Using / for division outside of calc() is deprecated and will be removed in Dart Sass 2.0.0.
-
