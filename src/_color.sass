@@ -20,9 +20,9 @@ $theme: ( colors: () )!default
   .border-#{$k}
     border: 1px $v solid
     &.border-darken
-      border-color: darken( $v, 4% )!important
+      border-color: color.scale($v, $lightness: -4%)!important
     &.border-lighten
-      border-color: lighten( $v, 4% )!important
+      border-color: color.scale($v, $lightness: 4%)!important
     &.border-b
       border-top: 0
       border-bottom: 1px $v solid
