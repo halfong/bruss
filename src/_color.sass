@@ -1,3 +1,4 @@
+@use "sass:color"
 $theme: ( colors: () )!default
 
 @each $k,$v in map-get( $theme, colors ) 
@@ -5,17 +6,16 @@ $theme: ( colors: () )!default
   .#{$k}
     color: $v
     &.darken
-      color: darken( $v, 10% )!important
+      color: color.scale($v, $lightness: -10%)!important
     &.lighten
-      color: lighten( $v, 10% )!important
+      color: color.scale($v, $lightness: 10%)!important
 
   .bg-#{$k}
     background-color: $v
     &.darken, &.tap-darken:active
-      background-color: darken( $v, 4% )!important
+      background-color: color.scale($v, $lightness: -4%)!important
     &.lighten, &.tap-lighten:active
-      background-color: lighten( $v, 4% )!important
-
+      background-color: color.scale($v, $lightness: 4%)!important
 
   .border-#{$k}
     border: 1px $v solid

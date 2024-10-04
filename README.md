@@ -183,7 +183,7 @@ Each key in $texts will be generated into classes, for example $texts key:'4', a
 
 - Wechat mini-program do not support '*' selector 
 - Wechat mini-program do not support 'body' selector 
-
+- Add `span{ vertical-align: middle;}`
 
 # Known Issues
 
