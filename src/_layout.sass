@@ -1,8 +1,10 @@
 body,html
   padding: 0
   margin: 0
+  @extend .t-4
 *
   box-sizing: border-box
+
 div
   position: relative
 .inline
@@ -37,17 +39,26 @@ div
 .center
     text-align: center 
 
-.fix-t
+.fix-tl
     position: fixed
     top: 0
     left: 0
-    width: 100%
     z-index: 10
-.fix-b
+.fix-tr
+    position: fixed
+    top: 0
+    right: 0
+    z-index: 10
+
+.fix-bl
     position: fixed
     bottom: 0
     left: 0
-    width: 100%
+    z-index: 10
+.fix-br
+    position: fixed
+    bottom: 0
+    right: 0
     z-index: 10
     
 .ab-tl
@@ -80,9 +91,9 @@ div
   flex-wrap: wrap
   justify-content: flex-start
   display: flex 
-  &.center
+  &.flex-center
     justify-content: center
-  &.vcenter
+  &.flex-vcenter
     align-items: center
 
 @media screen and (orientation: landscape)

@@ -1,10 +1,11 @@
 // defined your theme variables
 $theme: (
-  radius : 16px,
   container-max-width: 960px,
   container-padding-x: 4vw,
+  radius : 16px,
   colors: ( "white": #fff, "silver": #f4f4f4, "gray": #aaa, "black": #1b1b1b, "primary": #38B833 ),
-  texts: ( 1: 2.6rem, 2: 1.6rem, 3: 1.1rem, 4: 1rem, 5: .9rem, 6: .8rem, 7: .6rem ),
+  darken: 10%, lighten: 10%,
+  texts: ( 1: 2.6rem, 2: 1.6rem, 3: 1.1rem, 4: 1rem, 5: .9rem, 6: .8rem, 7: .6rem ), lineHeight: 1.6,
   sizes:  ( 24: 24px,36: 36px,44: 44px,54: 54px,64: 64px, 120: 120px ),
   spacings: ( 0: 0, 2: 2px, 5: 5px, 10: 10px, 15: 15px, 20: 20px, 30: 30px, 50: 50px ),
 );

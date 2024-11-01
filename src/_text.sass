@@ -24,9 +24,9 @@ h1, h2, h3, h4, h5, h6, p, i, a, span, li, div
 @each $k, $v in map-get( $theme, texts )
   .t-#{$k}
     font-size: $v
-    line-height: 1.5*$v
+    line-height: map-get( $theme, lineHeight )*$v
   .th-#{$k}
-    line-height: 1.5*$v!important
+    line-height: map-get( $theme, lineHeight )*$v!important
 
 @each $k, $v in map-get( $theme, sizes )
   .th-#{$k}

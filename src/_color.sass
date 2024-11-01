@@ -6,23 +6,33 @@ $theme: ( colors: () )!default
   .#{$k}
     color: $v
     &.darken
-      color: color.scale($v, $lightness: -10%)!important
+      color: color.scale($v, $lightness: - map-get( $theme, darken ) )!important
     &.lighten
-      color: color.scale($v, $lightness: 10%)!important
+      color: color.scale($v, $lightness: map-get( $theme, lighten ))!important
 
   .bg-#{$k}
     background-color: $v
-    &.darken, &.tap-darken:active
-      background-color: color.scale($v, $lightness: -4%)!important
-    &.lighten, &.tap-lighten:active
-      background-color: color.scale($v, $lightness: 4%)!important
+    &.bg-darken
+      background-color: color.scale($v, $lightness: - map-get( $theme, darken ))!important
+    &.bg-lighten
+      background-color: color.scale($v, $lightness: map-get( $theme, lighten ))!important
 
   .border-#{$k}
     border: 1px $v solid
     &.border-darken
-      border-color: color.scale($v, $lightness: -4%)!important
+      border-color: color.scale($v, $lightness: - map-get( $theme, darken ))!important
     &.border-lighten
-      border-color: color.scale($v, $lightness: 4%)!important
+      border-color: color.scale($v, $lightness: map-get( $theme, lighten ))!important
+    &.border-l
+      border-top: 0
+      border-bottom: 0
+      border-left: 1px $v solid
+      border-right: 0 
+    &.border-r
+      border-top: 0
+      border-bottom: 1px $v solid
+      border-left: 0
+      border-right: 1px $v solid
     &.border-b
       border-top: 0
       border-bottom: 1px $v solid
@@ -41,3 +51,11 @@ $theme: ( colors: () )!default
 .bg-cover
     background-size: cover!important
     background-position: center center!important
+
+
+.border-2
+  border-width: 2px!important
+.border-3
+  border-width: 3px!important
+.border-4
+  border-width: 4px!important
