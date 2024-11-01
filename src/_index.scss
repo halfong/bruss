@@ -2,9 +2,11 @@
  * default theme
  */
 $theme: (
-  radius : 16px,
+  radius : 12px,
   container-max-width: 960px,
   container-padding-x: 4vw,
+  darken: 10%,
+  lighten: 10%,
 
   colors: (
     "white": #fff,
@@ -23,6 +25,7 @@ $theme: (
     6: .8rem,
     7: .6rem
   ),
+  lineHeight: 1.5,
 
   sizes: (
     24: 24px,
