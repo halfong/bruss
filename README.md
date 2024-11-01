@@ -4,7 +4,7 @@
 
 Save **80%** (in my practice) time of writing styles by just `@user 'bruss'`.
 
-See the doc: [https://hal-f.cn/bruss](Doc Link of bruss)
+See the doc: [Document](https://hal-f.cn/bruss)
 
 
 # Credits
