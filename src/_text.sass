@@ -1,4 +1,4 @@
-$theme: ( texts: (), sizes: () )!default
+@use 'variables' as vars
 
 /**
  * 重置样式
@@ -21,14 +21,14 @@ h1, h2, h3, h4, h5, h6, p, i, a, span, li, div
  * 字号: .t1 ~ .t7
  * 行高: .th1 ~ .th7   & .th{..$sizes}
  */
-@each $k, $v in map-get( $theme, texts )
+@each $k, $v in vars.$texts
   .t-#{$k}
     font-size: $v
-    line-height: map-get( $theme, lineHeight )*$v
+    line-height: vars.$lineHeight*$v
   .th-#{$k}
-    line-height: map-get( $theme, lineHeight )*$v!important
+    line-height: vars.$lineHeight*$v!important
 
-@each $k, $v in map-get( $theme, sizes )
+@each $k, $v in vars.$sizes
   .th-#{$k}
     line-height: $v
 

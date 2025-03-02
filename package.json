@@ -1,8 +1,8 @@
 {
   "name": "bruss",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "Bruss is a simple css style kit base on sass, which save 80% time of styling web UI.",
-  "main": "src/_index.scss",
+  "main": "bruss.sass",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,4 +1,4 @@
-$theme: ( radius : 16px )!default
+@use 'variables' as vars
 
 /**
  * 显示/隐藏
@@ -16,13 +16,13 @@ $theme: ( radius : 16px )!default
  * 圆角
  */
 .round
-  border-radius: map-get($theme,radius)!important
+  border-radius: vars.$radius!important
   overflow: hidden
 .round-t
-  border-radius: map-get($theme,radius) map-get($theme,radius) 0 0
+  border-radius: vars.$radius vars.$radius 0 0
   overflow: hidden
 .round-b
-  border-radius: 0 0 map-get($theme,radius) map-get($theme,radius)
+  border-radius: 0 0 vars.$radius vars.$radius
   overflow: hidden
 .round-sink
   width: 6vw

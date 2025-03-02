@@ -1,6 +1,6 @@
-$theme: ( spacings: () )!default
+@use 'variables' as vars
 
-@each $k,$s in map-get( $theme, spacings )
+@each $k,$s in vars.$spacings
   .m-#{$k}
     margin: $s
   .mt-#{$k}

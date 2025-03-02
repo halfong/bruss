@@ -1,28 +1,28 @@
 @use "sass:color"
-$theme: ( colors: () )!default
+@use 'variables' as vars
 
-@each $k,$v in map-get( $theme, colors ) 
+@each $k,$v in vars.$colors
 
   .#{$k}
     color: $v
     &.darken
-      color: color.scale($v, $lightness: - map-get( $theme, darken ) )!important
+      color: color.adjust($v, $lightness: - vars.$darken)!important
     &.lighten
-      color: color.scale($v, $lightness: map-get( $theme, lighten ))!important
+      color: color.adjust($v, $lightness: vars.$lighten)!important
 
   .bg-#{$k}
     background-color: $v
     &.bg-darken
-      background-color: color.scale($v, $lightness: - map-get( $theme, darken ))!important
+      background-color: color.scale($v, $lightness: - vars.$darken)!important
     &.bg-lighten
-      background-color: color.scale($v, $lightness: map-get( $theme, lighten ))!important
+      background-color: color.scale($v, $lightness: vars.$lighten)!important
 
   .border-#{$k}
     border: 1px $v solid
     &.border-darken
-      border-color: color.scale($v, $lightness: - map-get( $theme, darken ))!important
+      border-color: color.scale($v, $lightness: - vars.$darken)!important
     &.border-lighten
-      border-color: color.scale($v, $lightness: map-get( $theme, lighten ))!important
+      border-color: color.scale($v, $lightness: vars.$lighten)!important
     &.border-l
       border-top: 0
       border-bottom: 0

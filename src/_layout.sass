@@ -1,7 +1,8 @@
+@use 'variables' as vars
+
 body,html
   padding: 0
   margin: 0
-  @extend .t-4
 *
   box-sizing: border-box
 
@@ -21,11 +22,11 @@ div
 @media screen and (orientation: portrait)
   .container
     width: 100vw
-    padding: 0 map-get( $theme, container-padding-x )
+    padding: 0 vars.$container-max-width
 
 @media screen and (orientation: landscape)
   .container
-    max-width: map-get( $theme, container-max-width )
+    max-width: vars.$container-max-width
     width: 100vw
     margin: 0 auto
 
